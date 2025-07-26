@@ -1,0 +1,114 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Background Video */
+#bgvideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Pink Blur */
+#pink-bg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,182,193,0.35) 0%, rgba(255,182,193,0) 70%);
+  filter: blur(120px);
+  z-index: 0;
+}
+
+/* Button Overlay */
+#overlay {
+  position: fixed;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#start-btn {
+  padding: 14px 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.6s ease;
+  box-shadow: 0 0 30px rgba(255, 192, 203, 0.2);
+  z-index: 2 ;
+}
+
+#start-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 40px rgba(255, 182, 193, 0.4);
+  transform: scale(1);
+}
+
+#start-btn.fade-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#start-btn.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+
+/* Lyrics Section */
+#lyrics-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 700px;
+  height: 160px;
+  overflow: hidden;
+  z-index: 5;
+  text-align: center;
+}
+
+
+#lyrics-container {
+  transition: transform 0.4s ease-in-out;
+}
+
+.lyric-line {
+  font-size: 1rem;
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.lyric-line.active {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
