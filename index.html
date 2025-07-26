@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyrics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video id="bgvideo" autoplay muted loop playsinline>
+    <source src="4kk.mp4" type="video/mp4" />
+  </video>
+
+  <!-- Pink Glow Effect -->
+  <div id="pink-bg"></div>
+
+  <!-- Start Button Overlay -->
+  <div id="overlay">
+    <button id="start-btn">Start</button>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bg-audio" src="chem.m4a" loop></audio>
+
+  <!--Lyrics Section -->
+  <div id="lyrics-wrapper">
+    <div id="lyrics-container"></div>
+  </div>
+
+  <script src="lyrics.js"></script>
+</body>
+</html>
